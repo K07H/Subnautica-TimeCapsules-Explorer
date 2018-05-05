@@ -1,6 +1,8 @@
 # Subnautica Time-Capsules Explorer
 **Description:**  
 This application allows you to navigate through Subnautica time-capsules voting queue.  
+It retrieves time-capsules data from the official API as JSON and displays it in a sortable data-grid.  
+Clicking on a data-grid row will open time-capsule details (including a direct link to the official website time-capsule page).  
   
 **Download page:**  
 [Release v1.1](https://github.com/K07H/Subnautica-TimeCapsules-Explorer/releases/tag/1.1)  
