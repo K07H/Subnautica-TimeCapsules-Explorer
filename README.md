@@ -11,3 +11,7 @@ Main window:
 
 Time-capsule preview window:  
 ![Time-capsule details window screenshot](https://raw.githubusercontent.com/K07H/Subnautica-TimeCapsules-Explorer/master/Screenshots/screenshot2.png)
+  
+**License and credits:**  
+Code is freely available under GNU General Public License v3.0.  
+All images and data are owned by [Unknown Worlds](https://unknownworlds.com/).
