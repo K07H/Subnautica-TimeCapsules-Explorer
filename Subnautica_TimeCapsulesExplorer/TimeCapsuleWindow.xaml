@@ -1,0 +1,60 @@
+﻿<Window x:Class="Subnautica_TimeCapsulesExplorer.TimeCapsuleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TimeCapsule Details" Height="630" Width="700" Icon="sublogo.ico">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="bg.jpg" Stretch="UniformToFill"></ImageBrush>
+        </Grid.Background>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+            <StackPanel Name="rootStackPanel" Orientation="Vertical" Margin="10,10,10,10">
+                <Label Content="Title" Height="28" Margin="0,0,0,0" Name="lbl_CapsuleTitle" Foreground="#bcd9ff" FontWeight="Bold" FontSize="16" VerticalAlignment="Top" />
+                <Grid Margin="0,0,0,0">
+                    <Image Margin="0,0,8,0" Name="img_CapsuleImage" Stretch="UniformToFill" />
+                </Grid>
+                <DockPanel>
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled">
+                        <TextBlock x:Name="tb_CapsuleText" VerticalAlignment="Top" Foreground="#bcd9ff" DockPanel.Dock="Left" Text="Blablabla
+Blabla
+Blablabla" FontSize="14" FontFamily="Consolas" FontStyle="Italic" TextWrapping="Wrap">
+                            <TextBlock.Background>
+                                <SolidColorBrush Color="#5f78ab" Opacity="0.37" />
+                            </TextBlock.Background>
+                        </TextBlock>
+                    </ScrollViewer>
+                </DockPanel>
+                <Grid VerticalAlignment="Top" Margin="0,10,0,0">
+                    <DockPanel>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Top" DockPanel.Dock="Left" MaxWidth="500">
+                            <TextBlock x:Name="tb_CapsuleItems" Foreground="#bcd9ff" VerticalAlignment="Top" TextWrapping="Wrap" FontWeight="DemiBold" Text="TimeCapsule items: Blablabla" />
+                            <TextBlock x:Name="tb_CapsuleAuthor" Foreground="#bcd9ff" VerticalAlignment="Top" Text="Created on PLATFORM by AUTHOR(AUTHOR_ID) TIME_AGO." TextWrapping="Wrap" FontStyle="Italic" />
+                            <TextBlock x:Name="tb_CapsuleUpVotes" Foreground="#bcd9ff" VerticalAlignment="Top" FontWeight="Bold" Text="Up votes: U" />
+                            <TextBlock x:Name="tb_CapsuleDownVotes" Foreground="#bcd9ff" VerticalAlignment="Top" FontWeight="Bold" Text="Down votes: D" />
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" VerticalAlignment="Top" DockPanel.Dock="Right">
+                            <TextBlock x:Name="tb_CapsuleCreated" Foreground="#bcd9ff" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="Created at: DATETIME"/>
+                            <TextBlock x:Name="tb_CapsuleUpdated" Foreground="#bcd9ff" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="Updated at: DATETIME"/>
+                            <TextBlock x:Name="tb_CapsuleModified" Foreground="#bcd9ff" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="Modified at: DATETIME"/>
+                            <TextBlock x:Name="tb_CapsuleLanguage" Foreground="#bcd9ff" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="Language: LANGUAGE"/>
+                            <TextBlock x:Name="tb_CapsuleCopies" Foreground="#bcd9ff" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="Copies found: N"/>
+                            <TextBlock x:Name="tb_CapsuleIsActive" Visibility="Hidden" Foreground="#bcd9ff" HorizontalAlignment="Right" VerticalAlignment="Top" TextWrapping="Wrap" Text="Is active: TRUE/FALSE"/>
+                        </StackPanel>
+                    </DockPanel>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+        <Label Tag="View it on official website" FontFamily="Consolas" FontWeight="Bold" FontSize="12" FontStyle="Italic" HorizontalAlignment="Left" Height="25" Name="lbl_OfficialWebsite" MouseLeftButtonDown="lbl_OfficialWebsite_MouseLeftButtonDown" Width="192" VerticalAlignment="Bottom">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Setter Property="Foreground" Value="CadetBlue" />
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="LightBlue" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Label.Style>
+            <TextBlock TextDecorations="Underline" Text="{Binding Path=Tag, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Label}}}" />
+        </Label>
+    </Grid>
+</Window>

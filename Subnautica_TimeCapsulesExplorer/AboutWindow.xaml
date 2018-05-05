@@ -1,0 +1,20 @@
+﻿<Window x:Class="Subnautica_TimeCapsulesExplorer.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About Subnautica TimeCapsules Explorer" Height="280" Width="340" Icon="sublogo.ico">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="bg.jpg" Stretch="UniformToFill"></ImageBrush>
+        </Grid.Background>
+        <TextBlock Name="tb_About" FontFamily="Consolas" Foreground="#bcd9ff" FontStyle="Italic" FontSize="12" Margin="5" TextWrapping="Wrap" Text=" Version: 1.1&#x0a;
+Author: Mangem0rt &lt;legendarytools@gmail.com&gt;&#x0a;
+Created on: 3rd May 2018&#x0a;
+Updated on: 5th May 2018&#x0a;
+&#x0a;
+&quot;I developped this application to be able to navigate through Subnautica time-capsules voting queue.&#x0a;
+It retrieves time-capsules data from the official API as JSON and displays it in a sortable data-grid.&#x0a;
+Clicking on a data-grid row will open time-capsule details (including a direct link to the official website time-capsule page).&quot;&#x0a;
+&#x0a;
+                                  -Mangem0rt" />
+    </Grid>
+</Window>
